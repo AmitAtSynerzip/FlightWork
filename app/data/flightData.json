@@ -1,0 +1,40 @@
+{
+  "Flights": [
+    {
+      "Id": 1,
+      "FlightNumber": "ASD",
+      "Source": "Indore",
+      "Destination": "Pune",
+      "BaseFare": 1000,
+      "DepartureDate": "5/4/2015",
+      "ArrivalDate": "5/4/2015"
+    },
+    {
+      "Id": 2,
+      "FlightNumber": "BSD",
+      "Source": "Indore",
+      "Destination": "Pune",
+      "BaseFare": 1020,
+      "DepartureDate": "6/4/2015",
+      "ArrivalDate": "6/4/2015"
+    },
+    {
+      "Id": 3,
+      "FlightNumber": "CSD",
+      "Source": "Indore",
+      "Destination": "Pune",
+      "BaseFare": 1200,
+      "DepartureDate": "5/4/2015",
+      "ArrivalDate": "6/4/2015"
+    },
+    {
+      "Id": 4,
+      "FlightNumber": "DSD",
+      "Source": "Pune",
+      "Destination": "Indore",
+      "BaseFare": 900,
+      "DepartureDate": "5/4/2015",
+      "ArrivalDate": "6/4/2015"
+    }
+  ]
+}

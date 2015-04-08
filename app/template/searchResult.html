@@ -1,0 +1,21 @@
+<div class="row clearfix">
+
+    <label for="priceRange">Price Range:</label>
+    <input type='range'  ng-model="priceRange" max="100" min="0" onchange="console.log(this.value);"
+           id="priceRange" style="width: 40%"/>
+
+    <table class="table  table-hover form-group" data-sort-name="Name" data-sort-order="desc">
+        <tr><td>Id</td><td data-sortable="true">Name</td><td>Source</td><td>Destination</td><td>Base Fare</td><td>Departure Date</td><td>Arrival Date</td></tr>
+
+        <tr ng-repeat="x in flights">
+            <td>{{ x.Id }}</td>
+            <td>{{ x.FlightNumber}}</td>
+            <td>{{ x.Source }}</td>
+            <td>{{ x.Destination }}</td>
+            <td>{{ x.BaseFare }}</td>
+            <td>{{ x.DepartureDate }}</td>
+            <td>{{ x.ArrivalDate }}</td>
+        </tr>
+    </table>
+
+</div>

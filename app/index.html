@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7,IE=8, IE=9, IE=10">
+  <meta name="description" content="Flight search for Amit">
+
+  <!-- meta tag for responsive application -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Flight Works</title>
+
+  <!-- load the required library -->
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+  <script src="../node_modules/underscore/underscore.js"></script>
+  <script src="../node_modules/angular/angular.js"></script>
+  <script src="../node_modules/angular-route/angular-route.js"></script>
+
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="app.css">
+
+  <!--[if lte IE8]>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+  <script src="../node_modules/json3/lib/json3.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 8]>
+  <script>
+    document.createElement('ng-include');
+    document.createElement('ng-pluralize');
+    document.createElement('ng-view');
+    // Optionally these for CSS
+    document.createElement('ng:include');
+    document.createElement('ng:pluralize');
+    document.createElement('ng:view');
+  </script>
+  <![endif]-->
+  <!--<link href="https://gitcdn.github.io/bootstrap-toggle/2.2.0/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.0/js/bootstrap-toggle.min.js"></script>-->
+
+  <!-- load application controller-->
+  <script src="flightControllers/flightAppController.js"></script>
+  <!--<script src="flightServices/flightGetDataService.js"></script>
+  <script src="flightControllers/searchMainController.js"></script>-->
+  <script src="flightControllers/searchResultController.js"></script>
+</head>
+  <body class="container" id="ng-app" ng-app="flightMainModule" ng-controller="flightMainController">
+
+    <div class="row clearfix">
+      <div class="col-md-12 column">
+        <div class="page-header">
+          <h1>
+            Amit's <small>Flight Search Module</small>
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!--<div ng-view=""></div>-->
+    <div class="ng-view"></div>
+
+  </body>
+</html>
