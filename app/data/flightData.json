@@ -15,8 +15,8 @@
       "Source": "Indore",
       "Destination": "Pune",
       "BaseFare": 1020,
-      "DepartureDate": "6/4/2015",
-      "ArrivalDate": "6/4/2015"
+      "DepartureDate": "06/04/2015",
+      "ArrivalDate": "06/04/2015"
     },
     {
       "Id": 3,
@@ -24,8 +24,8 @@
       "Source": "Indore",
       "Destination": "Pune",
       "BaseFare": 1200,
-      "DepartureDate": "5/4/2015",
-      "ArrivalDate": "6/4/2015"
+      "DepartureDate": "05/04/2015",
+      "ArrivalDate": "06/04/2015"
     },
     {
       "Id": 4,
@@ -33,8 +33,8 @@
       "Source": "Pune",
       "Destination": "Indore",
       "BaseFare": 900,
-      "DepartureDate": "5/4/2015",
-      "ArrivalDate": "6/4/2015"
+      "DepartureDate": "05/04/2015",
+      "ArrivalDate": "06/04/2015"
     }
   ]
 }

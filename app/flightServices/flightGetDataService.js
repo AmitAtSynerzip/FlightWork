@@ -37,15 +37,15 @@ module.factory('searchFlightResults',function($http){
         },
         searchFlight:function(flightDate,srcCit,destCit){
             if(flightDate && srcCit && destCit){
-                var flightDepartDate = flightDate.getDate() + "/" +
-                    (flightDate.getMonth() + 1) + "/" + flightDate.getFullYear();
+                /*var flightDepartDate = flightDate.getDate() + "/" +
+                    (flightDate.getMonth() + 1) + "/" + flightDate.getFullYear();*/
                 $http.get('data/flightData.json').success(function (data) {
                     /*Using Underscore library to fetch or query json objects, where data-->Flights is complete list of flights and Source/Destination/DepartureDate
                      are input criteria*/
                     var results = _.where(data.Flights, {
                         Source: srcCit,
                         Destination: destCit,//ArrivalDate: returnDate
-                        DepartureDate: flightDepartDate
+                        DepartureDate: flightDate
                     });
                     results.forEach(function (i) {
                         searchResult.push(i);

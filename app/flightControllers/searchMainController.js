@@ -31,5 +31,11 @@ var searchMainController = module.controller("searchMainController",[ '$scope','
             searchFlightResults.searchFlight($scope.flightDate,$scope.srcCit,$scope.destCit);
         };
 
+        $(function() {
+            $("#startDatepicker").datepicker({dateFormat: 'dd/mm/yy'});
+            $("#returnDatepicker").datepicker({dateFormat: 'dd/mm/yy'});
+        });
+
+
 }]);
 
