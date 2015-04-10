@@ -28,7 +28,7 @@ var searchMainController = module.controller("searchMainController",[ '$scope','
         $scope.destiCity = getFlightDataService.citydata;
 
         $scope.searchFlit =function(){
-            searchFlightResults.searchFlight($scope.flightDate,$scope.srcCit,$scope.destCit);
+            searchFlightResults.searchFlight($scope.flightDate, $scope.flightReturnDate, $scope.srcCit, $scope.destCit);
         };
 
         $(function() {

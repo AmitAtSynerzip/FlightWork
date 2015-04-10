@@ -3,20 +3,32 @@
     <label for="priceRange">Price Range:</label>
     <input type='range'  ng-model="priceRange" max="100" min="0" onchange="console.log(this.value);"
            id="priceRange" style="width: 40%"/>
-    <div id="slider-range"></div>
 
-    <table class="table  table-hover form-group" data-sort-name="Name" data-sort-order="desc">
-        <tr><td>Id</td><td data-sortable="true">Name</td><td>Source</td><td>Destination</td><td>Base Fare</td><td>Departure Date</td><td>Arrival Date</td></tr>
+    <div class="col-md-12">
+        <div id="slider-range"></div>
 
-        <tr ng-repeat="x in flights">
-            <td>{{ x.Id }}</td>
-            <td>{{ x.FlightNumber}}</td>
-            <td>{{ x.Source }}</td>
-            <td>{{ x.Destination }}</td>
-            <td>{{ x.BaseFare }}</td>
-            <td>{{ x.DepartureDate }}</td>
-            <td>{{ x.ArrivalDate }}</td>
-        </tr>
-    </table>
+        <table class="table  table-hover form-group col-md-6" data-sort-name="Name" data-sort-order="desc"
+               style="left: 35px;">
+            <tr>
+                <td>Id</td>
+                <td data-sortable="true">Name</td>
+                <td>Source</td>
+                <td>Destination</td>
+                <td>Base Fare</td>
+                <td>Departure Date</td>
+                <td>Arrival Date</td>
+            </tr>
 
+            <tr ng-repeat="x in flights">
+                <td>{{ x.Id }}</td>
+                <td>{{ x.FlightNumber}}</td>
+                <td>{{ x.Source }}</td>
+                <td>{{ x.Destination }}</td>
+                <td>{{ x.BaseFare }}</td>
+                <td>{{ x.DepartureDate }}</td>
+                <td>{{ x.ArrivalDate }}</td>
+            </tr>
+        </table>
+        <div id="amount"></div>
+    </div>
 </div>

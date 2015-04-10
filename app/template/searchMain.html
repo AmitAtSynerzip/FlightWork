@@ -29,14 +29,16 @@
                     <form role="form">
                         <div class="form-group">
                             <label for="sourceCityId">Source:</label>
-                            <input type="text" class="form-control" list="sourceCityList" ng-model="srcCit" id="sourceCityId" style="cursor: pointer">
+                            <input type="text" required="true" class="form-control" list="sourceCityList"
+                                   ng-model="srcCit" id="sourceCityId" style="cursor: pointer">
                             <datalist id="sourceCityList">
                                 <option ng-repeat="src in sourceCity">{{src}}</option>
                             </datalist>
                         </div>
                         <div class="form-group">
                             <label for="destinationCity">Destination:</label>
-                            <input type="text" class="form-control" list="destiCityList" ng-model="destCit" id="destinationCity" style="cursor: pointer">
+                            <input type="text" required="true" class="form-control" list="destiCityList"
+                                   ng-model="destCit" id="destinationCity" style="cursor: pointer">
                             <datalist id="destiCityList">
                                 <option ng-repeat="desti in destiCity">{{desti}}</option>
                             </datalist>
@@ -45,7 +47,8 @@
                             <div id="oneWayJrny">
                                 <label for="departDate">Departure Date:</label>
                                 <div class='input-group date' id='departDate' style="width: 50%">
-                                    <input type="text" id="startDatepicker" class="form-control" ng-model="flightDate">
+                                    <input type="text" required="true" id="startDatepicker" class="form-control"
+                                           ng-model="flightDate">
                             </div>
                             </div>
                             <div id="returnJrny" style="display: none">

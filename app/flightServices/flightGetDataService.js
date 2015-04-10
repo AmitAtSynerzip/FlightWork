@@ -35,21 +35,32 @@ module.factory('searchFlightResults',function($http){
             name={Id:data};
             this.name={Id:data};
         },
-        searchFlight:function(flightDate,srcCit,destCit){
+        searchFlight: function (flightDate, flightReturnDate, srcCit, destCit) {
             if(flightDate && srcCit && destCit){
-                /*var flightDepartDate = flightDate.getDate() + "/" +
-                    (flightDate.getMonth() + 1) + "/" + flightDate.getFullYear();*/
+
                 $http.get('data/flightData.json').success(function (data) {
-                    /*Using Underscore library to fetch or query json objects, where data-->Flights is complete list of flights and Source/Destination/DepartureDate
-                     are input criteria*/
-                    var results = _.where(data.Flights, {
+                    /*Using Underscore library to fetch or query json objects,
+                     where data-->Flights is complete list of flights and Source/Destination/DepartureDate
+                     are input criteria: Good for large app but with small module like this , its better to use loop
+                     var results = _.where(data.Flights, {
                         Source: srcCit,
                         Destination: destCit,//ArrivalDate: returnDate
                         DepartureDate: flightDate
-                    });
-                    results.forEach(function (i) {
-                        searchResult.push(i);
+                     });*/
 
+                    var resultFlights = [];
+                    data.Flights.forEach(function (flight) {
+                        if (flightReturnDate) {
+                            if ((flight.Source == srcCit) && (flight.Destination == destCit) && (flight.DepartureDate == flightDate) && (flight.ArrivalDate == flightReturnDate)) {
+                                searchResult.push(flight);
+                                console.log(searchResult);
+                            }
+                        } else {
+                            if ((flight.Source == srcCit) && (flight.Destination == destCit) && (flight.DepartureDate == flightDate)) {
+                                searchResult.push(flight);
+                                console.log(searchResult);
+                            }
+                        }
                     });
 
                 });

@@ -6,8 +6,8 @@
       "Source": "Indore",
       "Destination": "Pune",
       "BaseFare": 1000,
-      "DepartureDate": "5/4/2015",
-      "ArrivalDate": "5/4/2015"
+      "DepartureDate": "05/04/2015",
+      "ArrivalDate": "05/04/2015"
     },
     {
       "Id": 2,
